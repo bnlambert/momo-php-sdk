@@ -8,5 +8,5 @@ namespace BNLambert\Momo\Interfaces;
  */
 
 interface TransactionsInterface {
-    public function checkOut($tel, $amount);
+    public function checkOut($tel, int $amount);
 }

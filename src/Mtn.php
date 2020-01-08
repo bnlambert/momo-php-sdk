@@ -1,4 +1,7 @@
-<?php namespace BNLambert\Momo;
+<?php
+declare(strict_types=1);
+
+namespace BNLambert\Momo;
 
 use BNLambert\Momo\Interfaces\TransactionsInterface;
 use GuzzleHttp\Client;
@@ -21,7 +24,7 @@ class Mtn implements TransactionsInterface {
         $this->config = new Config($params);
     }
 
-    public function checkOut($tel, $amount)
+    public function checkOut($tel, int $amount)
     {
         $params = [
             'query' => [
@@ -39,9 +42,9 @@ class Mtn implements TransactionsInterface {
 
         try {
             $response = $client->request('GET', $this->config->requestUrl, $params);
-            return json_encode($response->getBody()->getContents(), true);
+            return json_encode($response->getBody()->getContents(), 128);
         }catch(\Exception $e) {
-            return json_encode($e->getResponse()->getBody()->getContents(), true);
+            return json_encode($e->getResponse()->getBody()->getContents(), 128);
         }
 
     }
