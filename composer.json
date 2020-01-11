@@ -1,6 +1,6 @@
 {
     "name": "bnlambert/momo-php-sdk",
-    "description": "MTN momo trnasactions in Cameroon",
+    "description": "MTN momo transactions in Cameroon",
     "type": "library",
     "license": "MIT",
     "authors": [
