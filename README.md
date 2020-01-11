@@ -9,7 +9,7 @@ composer require bnlambert/momo-php-sdk:dev-master
 ##Implementation
 ### Receive payment online
 To receive payment online, call the ``checkOut`` method. This method requires two parameter i.e. the client's number and the amount the client needs to pay.
-``$mtn->checkOut(string phone, int amount);``
+``$mtn->checkOut(string $phone, int $amount);``
 
 #### Example 
 ````
